@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop - MeShop.</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="brand">
+        <a href="../index.html">MeShop.</a>
+      </div>
+      <div class="nav-items">
+        <a href="../index.html">Home</a>
+        <a href="../login.html">Login</a>
+        <a href="../signup.html">Signup</a>
+        <a href="../cart/index.html">My Cart</a>
+        <a href="../profile/index.html">Profile</a>
+      </div>
+    </nav>
+
+    <main>
+      <aside>
+        <section>
+          <title>Colors</title>
+          <ul>
+            <li>
+              <input id="red" type="checkbox" name="color" value="red" />
+              <label for="red">Red</label>
+            </li>
+            <li>
+              <input id="blue" type="checkbox" name="color" value="blue" />
+              <label for="blue">Blue</label>
+            </li>
+            <li>
+              <input id="green" type="checkbox" name="color" value="green" />
+              <label for="green">Green</label>
+            </li>
+            <li>
+              <input id="black" type="checkbox" name="color" value="black" />
+              <label for="black">Black</label>
+            </li>
+            <li>
+              <input id="white" type="checkbox" name="color" value="white" />
+              <label for="white">White</label>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <title>Sizes</title>
+          <ul>
+            <li>
+              <input id="s" type="checkbox" name="size" value="S" />
+              <label for="s">S</label>
+            </li>
+            <li>
+              <input id="m" type="checkbox" name="size" value="M" />
+              <label for="m">M</label>
+            </li>
+            <li>
+              <input id="l" type="checkbox" name="size" value="L" />
+              <label for="l">L</label>
+            </li>
+            <li>
+              <input id="xl" type="checkbox" name="size" value="XL" />
+              <label for="xl">XL</label>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <title>Rating</title>
+          <input
+            type="range"
+            id="rating"
+            min="0"
+            max="5"
+            value="0"
+            step="1"
+          />
+          <div class="range-labels">
+            <span>0</span>
+            <span>5</span>
+          </div>
+        </section>
+        <section>
+          <title>Price Range</title>
+          <ul>
+            <li>
+              <input id="0-25" type="checkbox" name="prange" value="0-25" />
+              <label for="0-25">$0 to $25</label>
+            </li>
+            <li>
+              <input id="25-50" type="checkbox" name="prange" value="25-50" />
+              <label for="25-50">$25 to $50</label>
+            </li>
+            <li>
+              <input id="50-100" type="checkbox" name="prange" value="50-100" />
+              <label for="50-100">$50 to $100</label>
+            </li>
+            <li>
+              <input id="100on" type="checkbox" name="prange" value="100+" />
+              <label for="100on">$100 onwards</label>
+            </li>
+          </ul>
+        </section>
+        <button class="apply-filter-btn">Apply Filter</button>
+      </aside>
+      <main-content>
+        <div class="search-container">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#666" stroke-width="2"/>
+            <path d="M19 19L14.65 14.65" stroke="#666" stroke-width="2"/>
+          </svg>
+          <input type="text" id="searchInput" placeholder="Search" />
+        </div>
+        <div class="controls-bar">
+          <div class="filters">
+            <div class="filter active" data-category="all">All</div>
+            <div class="filter" data-category="men's clothing">Mens</div>
+            <div class="filter" data-category="women's clothing">Womens</div>
+            <div class="filter" data-category="jewelery">Jewellery</div>
+            <div class="filter" data-category="electronics">Electronics</div>
+          </div>
+          <div class="sort-container">
+            <label for="sortSelect">Sort By:</label>
+            <select id="sortSelect" class="sort-select">
+              <option value="default">Default</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="name-az">Name: A-Z</option>
+              <option value="name-za">Name: Z-A</option>
+              <option value="rating">Rating: High to Low</option>
+            </select>
+          </div>
+        </div>
+        <section>
+          <title>Men's Clothing</title>
+          <div class="items" id="mensProducts"></div>
+        </section>
+
+        <section>
+          <title>Women's Clothing</title>
+          <div class="items" id="womensProducts"></div>
+        </section>
+
+        <section>
+          <title>Jewelery</title>
+          <div class="items" id="jeweleryProducts"></div>
+        </section>
+
+        <section>
+          <title>Electronics</title>
+          <div class="items" id="electronicsProducts"></div>
+        </section>
+      </main-content>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

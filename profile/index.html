@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Profile - MeShop.</title>
+    <meta name="description" content="User profile page" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">MeShop.</div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../login.html">Login</a>
+            <a href="../signup.html">Signup</a>
+            <a href="../shop/index.html">Shop</a>
+            <a href="../cart/index.html">My Cart</a>
+            <a href="index.html">Profile</a>
+        </div>
+    </nav>
+
+    <div class="profile-container">
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="50" fill="#1a1a1a"/>
+                        <circle cx="50" cy="35" r="15" fill="white"/>
+                        <path d="M 25 75 Q 25 55 50 55 Q 75 55 75 75 L 75 85 L 25 85 Z" fill="white"/>
+                    </svg>
+                </div>
+                <h1 class="profile-name" id="userName">Welcome User</h1>
+                <p class="profile-email" id="userEmail">user@example.com</p>
+            </div>
+
+            <div class="profile-details">
+                <h2 class="section-title">Profile Information</h2>
+                <div class="detail-item">
+                    <span class="detail-label">First Name:</span>
+                    <span class="detail-value" id="firstName">-</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Last Name:</span>
+                    <span class="detail-value" id="lastName">-</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Email:</span>
+                    <span class="detail-value" id="emailDisplay">-</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Member Since:</span>
+                    <span class="detail-value" id="memberSince">-</span>
+                </div>
+            </div>
+
+            <div class="profile-actions">
+                <button class="btn btn-primary" onclick="editProfile()">Edit Profile</button>
+                <button class="btn btn-secondary" onclick="logout()">Logout</button>
+            </div>
+        </div>
+
+        <!-- Edit Profile Modal -->
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeEditModal()">&times;</span>
+                <h2>Edit Profile</h2>
+                <form id="editForm">
+                    <input type="text" id="editFname" placeholder="First Name" required>
+                    <input type="text" id="editLname" placeholder="Last Name" required>
+                    <input type="email" id="editEmail" placeholder="Email" required>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

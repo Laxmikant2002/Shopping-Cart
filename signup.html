@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - MeShop.</title>
+    <meta name="description" content="Create your MeShop account">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">MeShop.</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Signup</a>
+            <a href="shop/index.html">Shop</a>
+            <a href="cart/index.html">My Cart</a>
+            <a href="profile/index.html">Profile</a>
+        </div>
+    </nav>
+
+    <div class="form-container">
+        <div class="form-box">
+            <h1 class="form-title">Signup</h1>
+            <form id="signupForm">
+                <input type="text" id="fname" placeholder="First Name" required>
+                <input type="text" id="lname" placeholder="Last Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                <button type="submit" id="signup" class="btn btn-primary btn-full">Signup</button>
+                <p id="error" class="error-message"></p>
+                <p id="success" class="success-message"></p>
+                <p class="form-link">Already have an account? <a href="login.html">Login</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="signup.js"></script>
+</body>
+</html>
